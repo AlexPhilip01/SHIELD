@@ -216,7 +216,7 @@ section { padding: 6rem 4rem; position: relative; z-index: 1; }
 
 /* ── SERVICES ── */
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 0.5px solid var(--border); }
-.svc-card { background: var(--bg2); padding: 2.2rem; position: relative; overflow: hidden; transition: background 0.3s; }
+.svc-card { background: var(--bg2); padding: 2.2rem; position: relative; overflow: hidden; transition: background 0.3s; display: block; color: inherit; text-decoration: none; }
 .svc-card:hover { background: var(--bg3); }
 .svc-card::after { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.3s; }
 .svc-card:hover::after { height: 100%; }
@@ -623,75 +623,75 @@ footer { background: var(--bg); border-top: 0.5px solid var(--border); padding: 
   <p class="sec-sub">A complete suite of information security services — each available to any organisation we serve, with sector-specific expertise applied to every engagement.</p>
 
   <div class="services-grid">
-    <div class="svc-card">
+    <a class="svc-card" href="vapt.html">
       <div class="svc-num">01</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
       <div class="svc-title">Vulnerability Assessment & Pen Testing</div>
       <p class="svc-desc">Full VAPT of websites, apps, networks, and infrastructure. Severity-rated reports with remediation guidance. Delivered for corporate systems, government portals, and political party platforms.</p>
-    </div>
+    </a>
 
-    <div class="svc-card">
+    <a class="svc-card" href="security-audit.html">
       <div class="svc-num">02</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.5 3.5 10.7 8 12 4.5-1.3 8-6.5 8-12V6L12 2z"/></svg></div>
       <div class="svc-title">Security Audit & Assessment</div>
       <p class="svc-desc">Comprehensive manual review of your organisation's entire digital posture — accounts, devices, network, cloud, and staff practices. Delivered as a prioritised action report.</p>
-    </div>
+    </a>
 
-    <div class="svc-card">
+    <a class="svc-card" href="soc-service.html">
       <div class="svc-num">03</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
       <div class="svc-title">SOC as a Service</div>
       <p class="svc-desc">24/7 Security Operations Centre monitoring using Wazuh SIEM. Real-time threat detection across all your devices and network. Live dashboard and monthly threat briefings.</p>
-    </div>
+    </a>
 
-    <div class="svc-card">
+    <a class="svc-card" href="dpdp-compliance.html">
       <div class="svc-num">04</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
       <div class="svc-title">DPDP Act 2023 Compliance</div>
       <p class="svc-desc">Full compliance implementation for India's Digital Personal Data Protection Act — data inventory, privacy policy, consent management, retention policy, and breach response planning.</p>
-    </div>
+    </a>
 
-    <div class="svc-card">
+    <a class="svc-card" href="dark-web-monitoring.html">
       <div class="svc-num">05</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
       <div class="svc-title">Dark Web & Threat Intelligence</div>
       <p class="svc-desc">Continuous monitoring of dark web forums, breach databases, and threat feeds for your organisation's credentials, data, and mentions. Immediate alerts with actionable response guidance.</p>
-    </div>
+    </a>
 
-    <div class="svc-card">
+    <a class="svc-card" href="security-training.html">
       <div class="svc-num">06</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
       <div class="svc-title">Security Awareness Training</div>
       <p class="svc-desc">Tamil and English-language security training for staff and teams. Live phishing simulations, social engineering awareness, and OPSEC protocols — designed for non-technical audiences.</p>
-    </div>
+    </a>
 
-    <div class="svc-card">
+    <a class="svc-card" href="secure-infrastructure.html">
       <div class="svc-num">07</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
       <div class="svc-title">Secure Infrastructure Setup</div>
       <p class="svc-desc">Deploy encrypted email (SPF/DKIM/DMARC), Cloudflare DNS protection, WireGuard VPN for remote access, and endpoint security across your organisation's entire device fleet.</p>
-    </div>
+    </a>
 
-    <div class="svc-card">
+    <a class="svc-card" href="incident-response.html">
       <div class="svc-num">08</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
       <div class="svc-title">Incident Response</div>
       <p class="svc-desc">Rapid breach containment and forensic analysis. CERT-In compliant reporting within 6 hours. Step-by-step recovery process with post-incident report and defence updates.</p>
-    </div>
+    </a>
 
-    <div class="svc-card">
+    <a class="svc-card" href="political-it-security.html">
       <div class="svc-num">09</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
       <div class="svc-title">Political Party IT Security</div>
       <p class="svc-desc">Specialist service for political parties — voter data protection, WhatsApp group security, social media hardening, election war room SOC, and candidate OPSEC. DPDP Act 2023 compliant.</p>
-    </div>
+    </a>
 
-    <div class="svc-card">
+    <a class="svc-card" href="ai-cybersecurity-courses.html">
       <div class="svc-num">10</div>
       <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
       <div class="svc-title">AI &amp; Cybersecurity Courses</div>
       <p class="svc-desc">Hands-on, curriculum-aligned courses introducing students to AI fundamentals and cybersecurity practices. Delivered on-site or online for schools and colleges, with a parallel track for faculty and IT staff.</p>
-    </div>
+    </a>
 
   </div>
 </section>
