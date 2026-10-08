@@ -143,7 +143,7 @@ section { padding: 6rem 4rem; position: relative; z-index: 1; }
 
 /* ── SECTORS WE SERVE ── */
 .sectors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 0.5px solid var(--border); }
-.sector-card { background: var(--bg2); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; cursor: pointer; outline: none; }
+.sector-card { background: var(--bg2); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; cursor: pointer; outline: none; display: block; color: inherit; text-decoration: none; }
 .sector-card:focus-visible { outline: 2px solid var(--gold); outline-offset: -3px; }
 .sector-card:hover { background: var(--bg3); }
 .sector-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
@@ -216,7 +216,7 @@ section { padding: 6rem 4rem; position: relative; z-index: 1; }
 
 /* ── SERVICES ── */
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 0.5px solid var(--border); }
-.svc-card { background: var(--bg2); padding: 2.2rem; position: relative; overflow: hidden; transition: background 0.3s; }
+.svc-card { background: var(--bg2); padding: 2.2rem; position: relative; overflow: hidden; transition: background 0.3s; display: block; color: inherit; text-decoration: none; }
 .svc-card:hover { background: var(--bg3); }
 .svc-card::after { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.3s; }
 .svc-card:hover::after { height: 100%; }
@@ -318,6 +318,7 @@ footer { background: var(--bg); border-top: 0.5px solid var(--border); padding: 
   * { transition-duration: 0.01ms !important; }
 }
 </style>
+
 
 
 <style>
