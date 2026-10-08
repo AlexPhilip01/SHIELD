@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOC as a Service — Shield InfoSec</title>
-<meta name="description" content="24/7 Security Operations Centre monitoring using Wazuh SIEM — real-time threat detection, a live dashboard, and monthly threat briefings." />
+<title>PhishGuard: Free Phishing Email & SMS Checker — Shield InfoSec</title>
+<meta name="description" content="PhishGuard is a free phishing analyser from Shield InfoSec. Check suspicious emails and SMS messages for scam signs, risky links and spoofed senders.">
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--ink:#0f1012;--deep:#16181b;--panel:#1d2024;--line:#2a2d32;--line2:#3b3f46;--fg:#f2efe8;--soft:#c2bdb2;--mute:#8f8a80;--signal:#d6a84e;--signal2:#e4bc6a;--crit:#e5534b;--ok:#5cc795;
@@ -80,7 +80,7 @@ footer{border-top:1px solid var(--line);padding:1.8rem 2rem;display:flex;align-i
 @media(max-width:1000px){.nav-links{display:none}.nav-cta{display:none}.nav-toggle{display:flex}}
 @media(max-width:900px){nav{padding:0 1rem}.sector-page-hero{padding:6.5rem 1.25rem 2rem}.sector-page-content{padding:1rem 1.25rem 4rem;grid-template-columns:1fr;gap:1.5rem}.sector-page-content>div{padding:1.4rem}.sdp-threats{grid-template-columns:1fr}main.page{padding:6.5rem 1.25rem 4rem}footer{padding:1.5rem 1.25rem;flex-direction:column;text-align:center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
-</style>
+.pg-frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--deep);max-width:1136px}.pg-frame iframe{display:block;width:100%;height:min(1000px,85vh);min-height:640px;border:0;background:#fff}.pg-note{margin-top:1rem;color:var(--mute);font-size:.9rem}</style>
 </head>
 <body>
 
@@ -96,34 +96,48 @@ footer{border-top:1px solid var(--line);padding:1.8rem 2rem;display:flex;align-i
 <div class="mobile-menu" id="mobileMenu" hidden><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#sectors">Sectors</a><a href="index.html#political">Political</a><a href="index.html#services">Services</a><a href="index.html#why">Why Shield</a><a href="index.html#process">Process</a><a href="index.html#tools">Free tool</a><a href="index.html#contact">Contact</a></div>
 
 <section class="sector-page-hero">
-  <div class="crumbs"><a href="index.html">Home</a><span>/</span><a href="index.html#services">Services</a><span>/</span><span class="cur">SOC as a Service</span></div>
-  <div class="svc-page-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-  <div class="sec-label">Core Service — 03</div>
-  <div class="sdp-title">SOC as a Service</div>
-  <p class="sdp-sub">24/7 Security Operations Centre monitoring using Wazuh SIEM. Real-time threat detection across all your devices and network, a live dashboard, and monthly threat briefings — without the cost of building an in-house SOC.</p>
+  <div class="crumbs"><a href="index.html">Home</a><span>/</span><a href="index.html#tools">Free tool</a><span>/</span><span class="cur">PhishGuard</span></div>
+  <div class="sec-label">Free tool for everyone</div>
+  <div class="sdp-title">PhishGuard: Email &amp; SMS Threat Analyzer</div>
+  <p class="sdp-sub">Got a message that looks suspicious? Upload the email or paste the text and PhishGuard shows a risk score, the red flags it found, and a report you can download. Free to use, no sign-up.</p>
+  <a class="sdp-cta" href="https://alexphilip01.github.io/PhishGuard/" target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
+</section>
+
+<section class="sector-page-hero" style="padding-top:0">
+  <div class="pg-frame">
+    <iframe src="https://alexphilip01.github.io/PhishGuard/" title="PhishGuard Email and SMS Threat Analyzer" loading="lazy" sandbox="allow-scripts allow-same-origin allow-downloads allow-forms allow-popups" referrerpolicy="no-referrer"></iframe>
+  </div>
+  <p class="pg-note">Tool not loading? <a class="inline-link" href="https://alexphilip01.github.io/PhishGuard/" target="_blank" rel="noopener noreferrer" style="color:var(--signal)">Open PhishGuard in its own tab.</a></p>
 </section>
 
 <section class="sector-page-content">
   <div>
-    <div class="sdp-section-label">What's Included</div>
+    <div class="sdp-section-label">What it checks</div>
     <ul class="sdp-list">
-      <li>Wazuh SIEM deployment and tuning for your environment</li>
-      <li>24/7 real-time monitoring and alerting</li>
-      <li>Live dashboard access for your team</li>
-      <li>Monthly threat briefings in plain language</li>
-      <li>Defined escalation protocol for confirmed incidents</li>
+      <li><strong>Emails</strong> — headers, sender routing, risky wording and suspicious links, combined into a threat risk score</li>
+      <li><strong>SMS messages</strong> — scam patterns such as urgency, fake delivery notices, bank alerts and prize offers</li>
+      <li><strong>DMARC</strong> — whether a domain publishes a policy that helps stop others spoofing it</li>
     </ul>
-
+    <div class="sdp-section-label">How to use it</div>
+    <ul class="sdp-list">
+      <li>Upload a saved email (.eml) or paste the message text</li>
+      <li>Press Analyze and review the findings</li>
+      <li>Download the report if you need to share it or file a complaint</li>
+    </ul>
   </div>
   <div>
-    <div class="sdp-section-label">Good Fit For</div>
+    <div class="sdp-section-label">Privacy and limits</div>
     <ul class="sdp-list">
-      <li>Organisations without an in-house security team</li>
-      <li>Anyone who needs continuous coverage, not a one-time check</li>
-      <li>Sectors under regulatory pressure to show active monitoring</li>
+      <li>Email and SMS analysis runs in your browser. Shield does not receive your messages.</li>
+      <li>DMARC checks use a public DNS lookup, and the tool refreshes its list of known bad links from a public data feed.</li>
+      <li>PhishGuard is for education and awareness. A clean result does not guarantee a message is safe.</li>
     </ul>
-    <a href="index.html#contact" class="sdp-cta">Talk to Us About SOC →</a>
-
+    <div class="sdp-section-label">Lost money to a scam?</div>
+    <ul class="sdp-list">
+      <li>Call the national cybercrime helpline <strong>1930</strong> immediately</li>
+      <li>File a complaint at <strong>cybercrime.gov.in</strong></li>
+    </ul>
+    <a href="index.html#contact" class="sdp-cta">Need help for your organisation? →</a>
   </div>
 </section>
 
