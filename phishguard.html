@@ -132,7 +132,7 @@ footer{border-top:1px solid var(--line);padding:1.8rem 2rem;display:flex;align-i
     <div class="sdp-section-label">Privacy and limits</div>
     <ul class="sdp-list">
       <li>Email and SMS analysis runs in your browser. Shield does not receive your messages.</li>
-      <li>DMARC checks use a public DNS lookup, and the tool refreshes its list of known bad links from a public data feed.</li>
+      <li>DMARC checks send the queried domain to Google Public DNS. The browser also downloads a public threat-intelligence feed from GitHub; those services receive the usual request metadata.</li>
       <li>PhishGuard is for education and awareness. A clean result does not guarantee a message is safe.</li>
     </ul>
     <div class="sdp-section-label">Lost money to a scam?</div>
