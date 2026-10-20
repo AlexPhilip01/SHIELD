@@ -90,7 +90,7 @@
       });
     }, { threshold: .08, rootMargin: '0px 0px -35px 0px' });
     candidates.forEach(el => {
-      if (el.classList.contains('sh-interactive-visible')) return;
+      if (el.classList.contains('sh-interactive-visible') || el.classList.contains('sh-interactive-reveal')) return;
       el.classList.add('sh-interactive-reveal');
       observer.observe(el);
     });
