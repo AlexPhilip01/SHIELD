@@ -200,6 +200,10 @@
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     if (!validateStep(activeStep)) return;
+    if (activeStep < steps.length - 1) {
+      showStep(activeStep + 1);
+      return;
+    }
     renderResults(currentValues());
   });
 
