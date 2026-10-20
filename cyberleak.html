@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CyberLeak: Free Data Breach & Password Checker — Shield InfoSec</title>
-<meta name="description" content="CyberLeak is a free breach checker from Shield InfoSec. See if your email appeared in a known data breach and whether a password has been leaked, without sending the password anywhere.">
+<meta name="description" content="CyberLeak checks email addresses against breach sources and password hashes using a five-character SHA-1 prefix. The full password is not sent; email lookup queries are sent to breach-check services.">
 <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" href="/favicon.png" sizes="192x192"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--ink:#0f1012;--deep:#16181b;--panel:#1d2024;--line:#2a2d32;--line2:#3b3f46;--fg:#f2efe8;--soft:#c2bdb2;--mute:#8f8a80;--signal:#d6a84e;--signal2:#e4bc6a;--crit:#e5534b;--ok:#5cc795;
@@ -132,8 +132,8 @@ footer{border-top:1px solid var(--line);padding:1.8rem 2rem;display:flex;align-i
   <div>
     <div class="sdp-section-label">Privacy and limits</div>
     <ul class="sdp-list">
-      <li>Passwords are checked with k-anonymity: only the first 5 characters of a hash are sent, and the match happens on your device.</li>
-      <li>Breach data comes from Have I Been Pwned (CC BY 4.0) and XposedOrNot. Email lookups use these services.</li>
+      <li>For password checks, the full password stays in the browser. The first five characters of its SHA-1 hash are sent for a range lookup; the browser checks the returned suffix list for a match.</li>
+      <li>Email breach lookups transmit the entered address to the selected breach source(s), which can include Have I Been Pwned, LeakCheck and XposedOrNot. Do not use the lookup for an address you do not want processed by those services.</li>
       <li>A clean result covers only breaches that have been collected. It does not prove an account is safe.</li>
     </ul>
     <div class="sdp-section-label">Lost money to a scam?</div>
