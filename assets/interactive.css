@@ -82,6 +82,16 @@ html { scroll-padding-top: 5.5rem; }
   z-index: 1;
 }
 
+.sh-interactive-reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .5s ease, transform .5s cubic-bezier(.2,.75,.2,1);
+}
+.sh-interactive-visible {
+  opacity: 1;
+  transform: none;
+}
+
 .sh-tilt-card {
   transform-style: preserve-3d;
   transition: transform .2s cubic-bezier(.2,.75,.2,1),
@@ -136,6 +146,7 @@ button:disabled, input:disabled, [aria-disabled="true"] {
   #shield-back-to-top { width: 42px; height: 42px; border-radius: 11px; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .sh-interactive-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
   html { scroll-behavior: auto !important; }
   #shield-back-to-top,
   .sh-tilt-card,
