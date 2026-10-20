@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1012">
+  <meta name="description" content="Use Shield InfoSec's guided security-needs assessment to identify sensible cybersecurity priorities for your business, school, healthcare organisation or institution.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Security Needs Assessment | Shield InfoSec</title>
+  <link rel="canonical" href="https://www.shieldsecurity.co.in/security-assessment.html">
+  <meta property="og:site_name" content="Shield InfoSec">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Security Needs Assessment | Shield InfoSec">
+  <meta property="og:description" content="Build a practical starting-point checklist for your organisation's cybersecurity priorities.">
+  <meta property="og:url" content="https://www.shieldsecurity.co.in/security-assessment.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="stylesheet" href="/assets/security-assessment.css?v=1">
+  <link rel="stylesheet" href="/assets/interactive.css?v=1">
+  <script src="/assets/security-assessment.js?v=1" defer></script>
+  <script src="/assets/interactive.js?v=1" defer></script>
+</head>
+<body>
+  <header class="sa-nav">
+    <a class="sa-brand" href="/index.html" aria-label="Shield InfoSec home">
+      <span class="sa-brand-mark" aria-hidden="true">S</span>
+      <span><strong>SHIELD</strong><small>INFOSEC</small></span>
+    </a>
+    <nav aria-label="Main navigation" class="sa-nav-links">
+      <a href="/services.html">Services</a>
+      <a href="/sectors.html">Sectors</a>
+      <a href="/free-tools.html">Free tools</a>
+      <a href="/index.html#contact">Contact</a>
+    </nav>
+    <a class="sa-nav-cta" href="#assessment">Start assessment <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="sa-hero">
+      <div class="sa-eyebrow"><span class="sa-pulse" aria-hidden="true"></span> SECURITY PLANNING / INTERACTIVE GUIDE</div>
+      <h1>Find your next <span>security priority.</span></h1>
+      <p class="sa-lede">Answer a few practical questions and get a tailored discussion checklist for your organisation. No jargon-heavy score, no false assurance — just a clearer place to start.</p>
+      <div class="sa-hero-notes">
+        <span><i aria-hidden="true">01</i> About your organisation</span>
+        <span><i aria-hidden="true">02</i> Areas of concern</span>
+        <span><i aria-hidden="true">03</i> Current readiness</span>
+      </div>
+    </section>
+
+    <section class="sa-workspace" id="assessment" aria-labelledby="assessment-title">
+      <div class="sa-main-panel">
+        <div class="sa-panel-top">
+          <div>
+            <p class="sa-kicker">GUIDED ASSESSMENT</p>
+            <h2 id="assessment-title">Let's establish the context.</h2>
+          </div>
+          <span class="sa-estimate"><span aria-hidden="true">◷</span> About 2 minutes</span>
+        </div>
+        <div class="sa-progress-block">
+          <div class="sa-progress-meta"><span id="step-label">STEP 1 OF 3</span><span id="progress-percent">33% complete</span></div>
+          <div class="sa-progress-track" role="progressbar" aria-label="Assessment progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="33" id="progress-track"><span id="progress-fill"></span></div>
+        </div>
+
+        <form id="assessment-form" novalidate>
+          <fieldset class="sa-step" data-step="0">
+            <legend>01 <span>Organisation profile</span></legend>
+            <p class="sa-question-help">This helps us keep the suggested next steps relevant to your environment.</p>
+            <div class="sa-field-grid">
+              <div class="sa-field">
+                <label for="sector">Which best describes your organisation? <span aria-hidden="true">*</span></label>
+                <select id="sector" name="sector" required>
+                  <option value="">Choose a sector</option>
+                  <option value="small-business">Small or medium business</option>
+                  <option value="enterprise">Enterprise or technology company</option>
+                  <option value="healthcare">Healthcare or medical institution</option>
+                  <option value="education">School, college or university</option>
+                  <option value="government">Government or public-sector body</option>
+                  <option value="political">Political organisation or campaign</option>
+                  <option value="nonprofit">Non-profit or other institution</option>
+                  <option value="other">Other / not sure</option>
+                </select>
+                <p class="sa-field-error" data-error-for="sector"></p>
+              </div>
+              <div class="sa-field">
+                <label for="size">Approximate team size <span aria-hidden="true">*</span></label>
+                <select id="size" name="size" required>
+                  <option value="">Select team size</option>
+                  <option value="1–25 people">1–25 people</option>
+                  <option value="26–100 people">26–100 people</option>
+                  <option value="101–500 people">101–500 people</option>
+                  <option value="501+ people">501+ people</option>
+                  <option value="Not sure">Not sure</option>
+                </select>
+                <p class="sa-field-error" data-error-for="size"></p>
+              </div>
+            </div>
+            <div class="sa-callout"><span class="sa-callout-icon" aria-hidden="true">i</span><p>Do not enter domain names, IP addresses, passwords, patient/student data or technical details about an active vulnerability here.</p></div>
+            <div class="sa-step-actions"><span class="sa-step-hint">You can review answers before opening an enquiry email.</span><button class="sa-button sa-button-primary" type="button" data-next>Continue <span aria-hidden="true">→</span></button></div>
+          </fieldset>
+
+          <fieldset class="sa-step" data-step="1" hidden>
+            <legend>02 <span>Priority areas</span></legend>
+            <p class="sa-question-help">Select every area you would like to address. We will use these selections to build a practical discussion checklist.</p>
+            <div class="sa-choice-grid">
+              <label class="sa-choice"><input type="checkbox" name="priorities" value="app-test"><span class="sa-choice-icon" aria-hidden="true">⌘</span><span><strong>Website & application testing</strong><small>Find weaknesses in public-facing websites, APIs and applications.</small></span><span class="sa-check" aria-hidden="true"></span></label>
+              <label class="sa-choice"><input type="checkbox" name="priorities" value="infrastructure"><span class="sa-choice-icon" aria-hidden="true">⌁</span><span><strong>Network, cloud & infrastructure</strong><small>Review exposure, configuration, access and hardening.</small></span><span class="sa-check" aria-hidden="true"></span></label>
+              <label class="sa-choice"><input type="checkbox" name="priorities" value="monitoring"><span class="sa-choice-icon" aria-hidden="true">◉</span><span><strong>Threat monitoring & detection</strong><small>Understand monitoring coverage, alerting and external exposure.</small></span><span class="sa-check" aria-hidden="true"></span></label>
+              <label class="sa-choice"><input type="checkbox" name="priorities" value="incident"><span class="sa-choice-icon" aria-hidden="true">↯</span><span><strong>Incident readiness & response</strong><small>Clarify escalation, recovery, evidence handling and response roles.</small></span><span class="sa-check" aria-hidden="true"></span></label>
+              <label class="sa-choice"><input type="checkbox" name="priorities" value="privacy"><span class="sa-choice-icon" aria-hidden="true">◇</span><span><strong>Privacy & compliance readiness</strong><small>Map current controls, gaps, ownership and evidence needs.</small></span><span class="sa-check" aria-hidden="true"></span></label>
+              <label class="sa-choice"><input type="checkbox" name="priorities" value="awareness"><span class="sa-choice-icon" aria-hidden="true">◎</span><span><strong>Staff awareness & training</strong><small>Improve phishing awareness, safe handling and reporting habits.</small></span><span class="sa-check" aria-hidden="true"></span></label>
+              <label class="sa-choice"><input type="checkbox" name="priorities" value="baseline"><span class="sa-choice-icon" aria-hidden="true">▦</span><span><strong>Baseline review / not sure yet</strong><small>Help identify assets, existing safeguards and the next sensible step.</small></span><span class="sa-check" aria-hidden="true"></span></label>
+            </div>
+            <p class="sa-field-error" id="priority-error" aria-live="polite"></p>
+            <div class="sa-step-actions"><button class="sa-button sa-button-quiet" type="button" data-back>← Back</button><button class="sa-button sa-button-primary" type="button" data-next>Continue <span aria-hidden="true">→</span></button></div>
+          </fieldset>
+
+          <fieldset class="sa-step" data-step="2" hidden>
+            <legend>03 <span>Readiness & timing</span></legend>
+            <p class="sa-question-help">These answers guide the order of the discussion. They do not calculate or certify your security posture.</p>
+            <div class="sa-field-grid">
+              <div class="sa-field">
+                <label for="readiness">How would you describe your current security setup? <span aria-hidden="true">*</span></label>
+                <select id="readiness" name="readiness" required>
+                  <option value="">Choose the closest answer</option>
+                  <option value="No formal programme yet">No formal programme yet</option>
+                  <option value="Basic controls are in place">Basic controls are in place</option>
+                  <option value="Several tools and policies are in place">Several tools and policies are in place</option>
+                  <option value="Established team and documented processes">Established team and documented processes</option>
+                  <option value="Unsure / need a baseline review">Unsure / need a baseline review</option>
+                </select>
+                <p class="sa-field-error" data-error-for="readiness"></p>
+              </div>
+              <div class="sa-field">
+                <label for="timeline">When would you like to act? <span aria-hidden="true">*</span></label>
+                <select id="timeline" name="timeline" required>
+                  <option value="">Select a timeframe</option>
+                  <option value="Current concern or possible incident">Current concern or possible incident</option>
+                  <option value="Within the next 30 days">Within the next 30 days</option>
+                  <option value="Within the next 90 days">Within the next 90 days</option>
+                  <option value="Exploring options / planning ahead">Exploring options / planning ahead</option>
+                </select>
+                <p class="sa-field-error" data-error-for="timeline"></p>
+              </div>
+            </div>
+            <div class="sa-callout sa-callout-alert"><span class="sa-callout-icon" aria-hidden="true">!</span><p>If an incident may be active, avoid adding sensitive evidence or exploitable details. This guide is not an incident-response service or emergency channel.</p></div>
+            <div class="sa-step-actions"><button class="sa-button sa-button-quiet" type="button" data-back>← Back</button><button class="sa-button sa-button-primary" type="submit">Build my checklist <span aria-hidden="true">↗</span></button></div>
+          </fieldset>
+        </form>
+
+        <section id="assessment-results" class="sa-results" hidden aria-labelledby="results-heading">
+          <div class="sa-result-heading">
+            <span class="sa-result-mark" aria-hidden="true">✓</span>
+            <div><p class="sa-kicker">YOUR STARTING-POINT GUIDE</p><h2 id="results-heading" tabindex="-1">Suggested discussion priorities</h2></div>
+          </div>
+          <p class="sa-results-intro" id="results-intro"></p>
+          <div id="results-list" class="sa-results-list"></div>
+          <div id="sector-note" class="sa-sector-note" hidden></div>
+          <div class="sa-disclaimer"><strong>Important:</strong> These are discussion prompts based only on your selections. They are not a vulnerability scan, penetration test, compliance determination, formal risk rating or guarantee of security.</div>
+          <div class="sa-contact-form">
+            <div class="sa-contact-head"><p class="sa-kicker">OPTIONAL NEXT STEP</p><h3>Prepare an enquiry</h3><p>Add the details you are comfortable sharing. Nothing is submitted to this website.</p></div>
+            <div class="sa-field-grid">
+              <div class="sa-field"><label for="contact-name">Your name (optional)</label><input id="contact-name" name="contactName" form="contact-details" maxlength="100" autocomplete="name" placeholder="Name"></div>
+              <div class="sa-field"><label for="contact-org">Organisation (optional)</label><input id="contact-org" name="contactOrg" form="contact-details" maxlength="140" autocomplete="organization" placeholder="Organisation name"></div>
+              <div class="sa-field"><label for="contact-email">Work email (optional)</label><input id="contact-email" name="contactEmail" form="contact-details" type="email" maxlength="160" autocomplete="email" placeholder="you@organisation.com"></div>
+              <div class="sa-field"><label for="contact-phone">Phone (optional)</label><input id="contact-phone" name="contactPhone" form="contact-details" type="tel" maxlength="40" autocomplete="tel" placeholder="+91 …"></div>
+            </div>
+            <div class="sa-field sa-extra-field"><label for="contact-context">Additional context (optional)</label><textarea id="contact-context" name="contactContext" form="contact-details" maxlength="500" rows="3" placeholder="Keep this high level. Do not include passwords, personal records, logs or confidential evidence."></textarea><div class="sa-char-count"><span id="context-count">0</span>/500</div></div>
+            <form id="contact-details" novalidate>
+              <div class="sa-result-actions"><button class="sa-button sa-button-quiet" type="button" id="edit-answers">← Edit answers</button><button class="sa-button sa-button-primary" type="submit">Open enquiry email <span aria-hidden="true">↗</span></button><button class="sa-button sa-button-outline" type="button" id="copy-summary">Copy summary</button></div>
+            </form>
+            <p class="sa-privacy-note" id="email-status" aria-live="polite">Your answers remain in this page until you choose an action. Opening an email draft passes the summary to your configured email app; it does not submit anything to the website.</p>
+            <p class="sa-copy-fallback">If your email app does not open, copy the summary and email <a href="mailto:info@shieldsecurity.co.in">info@shieldsecurity.co.in</a>.</p>
+          </div>
+          <button class="sa-reset-link" type="button" id="start-over">Start a new assessment</button>
+        </section>
+      </div>
+
+      <aside class="sa-side-panel">
+        <div class="sa-side-visual" aria-hidden="true">
+          <div class="sa-orbit sa-orbit-one"></div><div class="sa-orbit sa-orbit-two"></div>
+          <div class="sa-shield"><svg viewBox="0 0 80 92" fill="none"><path d="M40 5 69 16v25c0 20-13 35-29 45C24 76 11 61 11 41V16L40 5Z" stroke="currentColor" stroke-width="2"/><path d="m27 44 9 9 19-20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="sa-visual-tag">CONTROL / CLARITY / ACTION</span>
+        </div>
+        <p class="sa-kicker">WHAT YOU'LL GET</p>
+        <h2>A useful first conversation.</h2>
+        <ul class="sa-benefits">
+          <li><span>01</span><div><strong>Relevant priorities</strong><p>Discussion topics aligned to the areas you select.</p></div></li>
+          <li><span>02</span><div><strong>A sensible starting point</strong><p>Prompts that help clarify what to validate first.</p></div></li>
+          <li><span>03</span><div><strong>An enquiry you control</strong><p>Review the email draft before deciding whether to send it.</p></div></li>
+        </ul>
+        <div class="sa-side-note"><span aria-hidden="true">◈</span><p><strong>Designed for privacy.</strong> Answers are processed in this page and are not sent to a Shield website endpoint or saved in browser storage.</p></div>
+        <a class="sa-side-link" href="/services.html">Explore Shield InfoSec services <span aria-hidden="true">→</span></a>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="sa-footer">
+    <a class="sa-footer-brand" href="/index.html">SHIELD INFOSEC</a>
+    <p>Security planning is a process, not a score.</p>
+    <div><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/index.html#contact">Contact</a></div>
+  </footer>
+</body>
+</html>
