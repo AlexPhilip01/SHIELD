@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SnapEx: Free Photo Metadata Viewer & Remover — Shield InfoSec</title>
-<meta name="description" content="SnapEx is a free photo privacy tool from Shield InfoSec. See the hidden location, camera and date data inside a photo, edit it or remove it before you share. Runs in your browser; photos are never uploaded.">
+<meta name="description" content="SnapEx lets you inspect and edit photo metadata in your browser. Local files are not posted to Shield InfoSec; the optional image-URL workflow contacts the image host directly.">
 <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" href="/favicon.png" sizes="192x192"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--ink:#0f1012;--deep:#16181b;--panel:#1d2024;--line:#2a2d32;--line2:#3b3f46;--fg:#f2efe8;--soft:#c2bdb2;--mute:#8f8a80;--signal:#d6a84e;--signal2:#e4bc6a;--crit:#e5534b;--ok:#5cc795;
@@ -138,8 +138,8 @@ footer{border-top:1px solid var(--line);padding:1.8rem 2rem;display:flex;align-i
     </ul>
     <div class="sdp-section-label">Privacy and limits</div>
     <ul class="sdp-list">
-      <li>Photos are read and rewritten by your browser. Nothing is uploaded, stored or logged.</li>
-      <li>The map tiles and a few code libraries load from public services when you use the tool.</li>
+      <li>When you choose a local file, metadata processing happens in your browser; the file is not posted to Shield InfoSec’s site.</li>
+      <li>Metadata parsing libraries load from public CDNs. If you choose Load from URL, your browser contacts the image host directly; map features may open Google Maps. Those external services may receive their usual request and connection metadata.</li>
       <li>Removing metadata does not change what is visible in the picture itself, such as signs or landmarks.</li>
     </ul>
     <a href="index.html#contact" class="sdp-cta">Need help for your organisation? →</a>
