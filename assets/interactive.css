@@ -1,0 +1,158 @@
+/* Shield InfoSec — lightweight interaction and 3D polish. Keeps the charcoal/gold identity. */
+:root {
+  --sh-gold: #d6a84e;
+  --sh-gold-light: #e4bc6a;
+  --sh-ink: #0f1012;
+  --sh-motion-fast: 180ms;
+}
+
+html { scroll-padding-top: 5.5rem; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+:target { scroll-margin-top: 5.5rem; }
+
+#shield-scroll-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 1000;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #b9852d, #f1d58b 65%, #fff2bd);
+  box-shadow: 0 0 12px rgb(214 168 78 / 38%);
+  pointer-events: none;
+  transform-origin: left center;
+}
+
+#shield-back-to-top {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(214 168 78 / 55%);
+  border-radius: 12px;
+  color: var(--sh-gold-light);
+  background: rgb(15 16 18 / 90%);
+  box-shadow: 0 10px 28px rgb(0 0 0 / 28%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+  cursor: pointer;
+}
+#shield-back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#shield-back-to-top:hover {
+  border-color: var(--sh-gold-light);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 38%), 0 0 20px rgb(214 168 78 / 13%);
+}
+#shield-back-to-top:focus-visible,
+.sh-tilt-card:focus-visible {
+  outline: 2px solid var(--sh-gold-light);
+  outline-offset: 3px;
+}
+
+#home figure { isolation: isolate; }
+#home .shield-3d-hero {
+  position: absolute;
+  z-index: 0;
+  top: 42px;
+  right: 2px;
+  width: min(48%, 240px);
+  aspect-ratio: 1;
+  height: auto;
+  opacity: .24;
+  pointer-events: none;
+  filter: saturate(.88);
+}
+#home figure > div,
+#home figure > svg {
+  position: relative;
+  z-index: 1;
+}
+
+.sh-interactive-reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .5s ease, transform .5s cubic-bezier(.2,.75,.2,1);
+}
+.sh-interactive-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.sh-tilt-card {
+  transform-style: preserve-3d;
+  transition: transform .2s cubic-bezier(.2,.75,.2,1),
+              border-color .2s ease,
+              box-shadow .2s ease,
+              background-color .2s ease;
+}
+.sh-tilt-card.sh-tilting {
+  transform: perspective(1000px) rotateX(var(--sh-tilt-x, 0deg)) rotateY(var(--sh-tilt-y, 0deg)) translateY(-3px);
+  border-color: rgb(214 168 78 / 55%);
+  box-shadow: 0 24px 50px rgb(0 0 0 / 22%), 0 0 0 1px rgb(214 168 78 / 8%);
+}
+.sh-tilt-card > * { backface-visibility: hidden; }
+
+a, button, input[type="button"], input[type="submit"], [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+main a:focus-visible,
+main button:focus-visible,
+footer a:focus-visible {
+  outline: 2px solid var(--sh-gold-light);
+  outline-offset: 3px;
+}
+button, input[type="button"], input[type="submit"], [role="button"] {
+  transition: box-shadow .18s ease, border-color .18s ease, filter .18s ease, transform .18s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  main button:hover,
+  main input[type="button"]:hover,
+  main input[type="submit"]:hover,
+  main a[role="button"]:hover {
+    filter: brightness(1.045);
+  }
+}
+main button:active,
+main input[type="button"]:active,
+main input[type="submit"]:active,
+main a[role="button"]:active {
+  filter: brightness(.98);
+}
+button:disabled, input:disabled, [aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  #home .shield-3d-hero {
+    top: 46px;
+    right: -8px;
+    width: 150px;
+    opacity: .14;
+  }
+  #shield-back-to-top { width: 42px; height: 42px; border-radius: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sh-interactive-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  html { scroll-behavior: auto !important; }
+  #shield-back-to-top,
+  .sh-tilt-card,
+  button, input[type="button"], input[type="submit"], [role="button"] {
+    transition: none !important;
+    animation: none !important;
+  }
+  .sh-tilt-card.sh-tilting { transform: none !important; }
+}
