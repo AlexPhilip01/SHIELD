@@ -234,7 +234,7 @@
       ctx.beginPath(); ctx.arc(light.x,light.y,2.1,0,Math.PI*2);
       ctx.fillStyle = '#fff0bd'; ctx.shadowColor = 'rgba(228,188,106,.95)'; ctx.shadowBlur = 12; ctx.fill(); ctx.shadowBlur = 0;
 
-      if (!reduceMotion && visible && !document.hidden) raf = requestAnimationFrame(draw);
+      if (!force && !reduceMotion && visible && !document.hidden) raf = requestAnimationFrame(draw);
     }
 
     const observer = ('IntersectionObserver' in window)
@@ -268,6 +268,7 @@
     if ('ResizeObserver' in window) new ResizeObserver(resize).observe(figure);
     resize();
     if (reduceMotion) draw(performance.now(), true);
+    else if (!observer && visible) raf = requestAnimationFrame(draw);
   }
 
   function enhance() {
