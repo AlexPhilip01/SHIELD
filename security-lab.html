@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1012">
+  <meta name="description" content="Explore a simulated security incident lifecycle and configure a sample security architecture with Shield InfoSec's interactive security lab.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Interactive Security Lab | Shield InfoSec</title>
+  <link rel="canonical" href="https://www.shieldsecurity.co.in/security-lab.html">
+  <meta property="og:site_name" content="Shield InfoSec">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Interactive Security Lab | Shield InfoSec">
+  <meta property="og:description" content="Explore a simulated security incident lifecycle and configure a sample security architecture.">
+  <meta property="og:url" content="https://www.shieldsecurity.co.in/security-lab.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="stylesheet" href="/assets/security-lab.css?v=1">
+  <link rel="stylesheet" href="/assets/interactive.css?v=1">
+  <script src="/assets/security-lab.js?v=1" defer></script>
+  <script src="/assets/interactive.js?v=1" defer></script>
+</head>
+<body>
+  <header class="sl-nav">
+    <a class="sl-brand" href="/index.html" aria-label="Shield InfoSec home">
+      <span class="sl-brand-mark" aria-hidden="true">S</span>
+      <span><strong>SHIELD</strong><small>INFOSEC</small></span>
+    </a>
+    <nav aria-label="Main navigation" class="sl-links">
+      <a href="/services.html">Services</a>
+      <a href="/sectors.html">Sectors</a>
+      <a href="/free-tools.html">Free tools</a>
+      <a href="/security-assessment.html">Assessment</a>
+      <a href="/index.html#contact">Contact</a>
+    </nav>
+    <a class="sl-nav-cta" href="#architecture">Explore architecture <span aria-hidden="true">↘</span></a>
+  </header>
+
+  <main>
+    <section class="sl-hero">
+      <div class="sl-hero-copy">
+        <p class="sl-eyebrow"><span class="sl-live-dot" aria-hidden="true"></span> INTERACTIVE SECURITY LAB <span class="sl-demo-pill">SIMULATION ONLY</span></p>
+        <h1>See security as a <span>connected system.</span></h1>
+        <p class="sl-lede">Walk through a sample incident lifecycle and explore how common security layers fit together. Every event and diagram here is illustrative — no live systems are monitored or changed.</p>
+        <div class="sl-hero-actions">
+          <a class="sl-button sl-primary" href="#incident">Explore incident flow <span aria-hidden="true">→</span></a>
+          <a class="sl-button sl-secondary" href="#architecture">Configure architecture</a>
+        </div>
+        <div class="sl-proof-row">
+          <span><i aria-hidden="true">01</i> Trace a response</span>
+          <span><i aria-hidden="true">02</i> Choose a profile</span>
+          <span><i aria-hidden="true">03</i> Toggle protection layers</span>
+        </div>
+      </div>
+      <div class="sl-hero-visual" aria-hidden="true">
+        <div class="sl-radar sl-radar-a"></div>
+        <div class="sl-radar sl-radar-b"></div>
+        <div class="sl-orbit sl-orbit-a"></div>
+        <div class="sl-orbit sl-orbit-b"></div>
+        <div class="sl-hero-core">
+          <svg viewBox="0 0 80 92" fill="none"><path d="M40 5 69 16v25c0 20-13 35-29 45C24 76 11 61 11 41V16L40 5Z" stroke="currentColor" stroke-width="2"/><path d="m27 44 9 9 19-20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="sl-hero-node sl-node-one">IDENTITY</span>
+        <span class="sl-hero-node sl-node-two">DETECTION</span>
+        <span class="sl-hero-node sl-node-three">RECOVERY</span>
+        <span class="sl-hero-coordinates">12.9716° N / 80.2206° E</span>
+      </div>
+    </section>
+
+    <section class="sl-section" id="incident" aria-labelledby="incident-title">
+      <div class="sl-section-heading">
+        <div><p class="sl-kicker">01 / INCIDENT LIFECYCLE</p><h2 id="incident-title">One alert. A controlled response.</h2></div>
+        <p>Choose a scenario and step through a common response pattern. This is a demonstration workflow, not a live SOC feed or a substitute for your incident plan.</p>
+      </div>
+      <div class="sl-incident-layout">
+        <div class="sl-incident-left">
+          <div class="sl-demo-banner"><span class="sl-demo-symbol" aria-hidden="true">◉</span><div><strong>Scenario simulator</strong><small>Illustrative event data · No connection to live infrastructure</small></div><span class="sl-demo-pill">DEMO</span></div>
+          <div class="sl-field">
+            <label for="scenario">Choose a sample incident</label>
+            <select id="scenario">
+              <option value="phishing">Phishing / suspicious sign-in</option>
+              <option value="cloud">Potentially exposed cloud storage</option>
+              <option value="ransomware">Ransomware indicator</option>
+            </select>
+          </div>
+          <div class="sl-flow" role="group" aria-label="Incident response stages">
+            <button type="button" class="sl-stage is-active" data-stage="0" aria-pressed="true"><span class="sl-stage-icon">⌁</span><span><small>STAGE 01</small><strong>Detect</strong></span><span class="sl-stage-state">NOW</span></button>
+            <span class="sl-flow-line" aria-hidden="true"></span>
+            <button type="button" class="sl-stage" data-stage="1" aria-pressed="false"><span class="sl-stage-icon">⌕</span><span><small>STAGE 02</small><strong>Triage</strong></span><span class="sl-stage-state">NEXT</span></button>
+            <span class="sl-flow-line" aria-hidden="true"></span>
+            <button type="button" class="sl-stage" data-stage="2" aria-pressed="false"><span class="sl-stage-icon">⬡</span><span><small>STAGE 03</small><strong>Contain</strong></span><span class="sl-stage-state">PENDING</span></button>
+            <span class="sl-flow-line" aria-hidden="true"></span>
+            <button type="button" class="sl-stage" data-stage="3" aria-pressed="false"><span class="sl-stage-icon">↻</span><span><small>STAGE 04</small><strong>Recover</strong></span><span class="sl-stage-state">PENDING</span></button>
+            <span class="sl-flow-line" aria-hidden="true"></span>
+            <button type="button" class="sl-stage" data-stage="4" aria-pressed="false"><span class="sl-stage-icon">✓</span><span><small>STAGE 05</small><strong>Learn</strong></span><span class="sl-stage-state">PENDING</span></button>
+          </div>
+          <div class="sl-incident-foot"><span class="sl-foot-dot" aria-hidden="true"></span> Demo status: <strong id="sim-status">Alert received</strong><span class="sl-foot-sep">/</span><span id="sim-step-label">1 of 5</span></div>
+        </div>
+        <article class="sl-response-card" aria-live="polite" aria-atomic="true">
+          <div class="sl-response-top"><span class="sl-kicker" id="response-kicker">DETECT / EXAMPLE 01</span><span class="sl-response-index" id="response-index">01</span></div>
+          <h3 id="response-title">Validate the initial signal.</h3>
+          <p id="response-description">Correlate the suspicious sign-in with the reported message, identity context and available logs. Preserve the timestamps and source of the alert.</p>
+          <div class="sl-response-divider"></div>
+          <p class="sl-response-label">DISCUSSION CHECKPOINT</p>
+          <p class="sl-response-checkpoint" id="response-checkpoint">What evidence confirms the activity, and who is authorised to lead the response?</p>
+          <div class="sl-response-footer"><span class="sl-response-state" id="response-state"><i aria-hidden="true"></i> DEMONSTRATION</span><div><button class="sl-icon-button" type="button" id="previous-stage" aria-label="Previous stage" disabled>←</button><button class="sl-icon-button sl-next-button" type="button" id="next-stage" aria-label="Next stage">→</button></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sl-section sl-architecture-section" id="architecture" aria-labelledby="architecture-title">
+      <div class="sl-section-heading">
+        <div><p class="sl-kicker">02 / ARCHITECTURE EXPLORER</p><h2 id="architecture-title">Build a layered defence.</h2></div>
+        <p>Select a sample environment and toggle security layers. The model updates to show a discussion-ready stack, not a complete reference architecture or a certification of coverage.</p>
+      </div>
+      <div class="sl-architecture-layout">
+        <div class="sl-architecture-controls">
+          <div class="sl-control-card">
+            <p class="sl-control-label">CHOOSE AN ENVIRONMENT</p>
+            <label for="environment" class="sl-sr-only">Environment profile</label>
+            <select id="environment">
+              <option value="small">Small or medium business</option>
+              <option value="healthcare">Healthcare organisation</option>
+              <option value="education">School or university</option>
+              <option value="enterprise">Enterprise / SaaS</option>
+            </select>
+            <p id="environment-description" class="sl-control-help">A maintainable baseline focused on identity, endpoint controls, perimeter exposure and recoverability.</p>
+          </div>
+          <div class="sl-control-card">
+            <div class="sl-control-heading"><p class="sl-control-label">SECURITY LAYERS</p><button type="button" id="select-recommended" class="sl-text-button">Use suggested set ↗</button></div>
+            <div id="layer-toggles" class="sl-layer-toggles">
+              <button type="button" class="sl-layer-toggle is-selected" data-layer="identity" aria-pressed="true"><span class="sl-toggle-icon">ID</span><span><strong>Identity & MFA</strong><small>Accounts, access, privileged roles</small></span><i aria-hidden="true"></i></button>
+              <button type="button" class="sl-layer-toggle is-selected" data-layer="endpoint" aria-pressed="true"><span class="sl-toggle-icon">EP</span><span><strong>Endpoint protection</strong><small>Devices, hardening, EDR</small></span><i aria-hidden="true"></i></button>
+              <button type="button" class="sl-layer-toggle is-selected" data-layer="network" aria-pressed="true"><span class="sl-toggle-icon">NW</span><span><strong>Network & cloud</strong><small>Exposure, configuration, segmentation</small></span><i aria-hidden="true"></i></button>
+              <button type="button" class="sl-layer-toggle is-selected" data-layer="email" aria-pressed="true"><span class="sl-toggle-icon">EM</span><span><strong>Email security</strong><small>Filtering, DMARC, phishing reports</small></span><i aria-hidden="true"></i></button>
+              <button type="button" class="sl-layer-toggle" data-layer="application" aria-pressed="false"><span class="sl-toggle-icon">AP</span><span><strong>Application security</strong><small>Secure SDLC, testing, secrets</small></span><i aria-hidden="true"></i></button>
+              <button type="button" class="sl-layer-toggle" data-layer="data" aria-pressed="false"><span class="sl-toggle-icon">DT</span><span><strong>Data protection</strong><small>Classification, encryption, privacy</small></span><i aria-hidden="true"></i></button>
+              <button type="button" class="sl-layer-toggle" data-layer="monitoring" aria-pressed="false"><span class="sl-toggle-icon">SI</span><span><strong>Detection & response</strong><small>Logging, alerts, incident ownership</small></span><i aria-hidden="true"></i></button>
+              <button type="button" class="sl-layer-toggle" data-layer="recovery" aria-pressed="true"><span class="sl-toggle-icon">BC</span><span><strong>Backup & recovery</strong><small>Restore tests, resilience, continuity</small></span><i aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="sl-architecture-display">
+          <div class="sl-architecture-head"><div><p class="sl-control-label">ILLUSTRATIVE CONTROL MAP</p><h3 id="architecture-profile">SMB / Core protections</h3></div><span class="sl-demo-pill">MODEL VIEW</span></div>
+          <div class="sl-architecture-scene" id="architecture-scene" aria-label="Interactive layered security architecture">
+            <div class="sl-scene-grid" aria-hidden="true"></div>
+            <div class="sl-scene-orbit sl-orbit-x" aria-hidden="true"></div><div class="sl-scene-orbit sl-orbit-y" aria-hidden="true"></div>
+            <svg class="sl-connector-svg" viewBox="0 0 640 420" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M320 195 115 105 M320 195 320 86 M320 195 525 105 M320 195 115 315 M320 195 320 333 M320 195 525 315" />
+              <path d="M115 105 320 86 525 105 M115 315 320 333 525 315" class="sl-connector-secondary" />
+            </svg>
+            <div class="sl-scene-core"><svg viewBox="0 0 80 92" fill="none" aria-hidden="true"><path d="M40 5 69 16v25c0 20-13 35-29 45C24 76 11 61 11 41V16L40 5Z" stroke="currentColor" stroke-width="2"/><path d="m27 44 9 9 19-20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ORGANISATION</span></div>
+            <button type="button" class="sl-arch-node sl-arch-node-identity is-selected" data-layer="identity" aria-pressed="true"><span class="sl-arch-node-symbol">ID</span><strong>Identity</strong><small>Access control</small></button>
+            <button type="button" class="sl-arch-node sl-arch-node-endpoint is-selected" data-layer="endpoint" aria-pressed="true"><span class="sl-arch-node-symbol">EP</span><strong>Endpoints</strong><small>Device controls</small></button>
+            <button type="button" class="sl-arch-node sl-arch-node-network is-selected" data-layer="network" aria-pressed="true"><span class="sl-arch-node-symbol">NW</span><strong>Network / cloud</strong><small>Infrastructure</small></button>
+            <button type="button" class="sl-arch-node sl-arch-node-email is-selected" data-layer="email" aria-pressed="true"><span class="sl-arch-node-symbol">EM</span><strong>Email</strong><small>Threat prevention</small></button>
+            <button type="button" class="sl-arch-node sl-arch-node-application" data-layer="application" aria-pressed="false"><span class="sl-arch-node-symbol">AP</span><strong>Applications</strong><small>Secure engineering</small></button>
+            <button type="button" class="sl-arch-node sl-arch-node-data" data-layer="data" aria-pressed="false"><span class="sl-arch-node-symbol">DT</span><strong>Data</strong><small>Protect sensitive info</small></button>
+            <button type="button" class="sl-arch-node sl-arch-node-monitoring" data-layer="monitoring" aria-pressed="false"><span class="sl-arch-node-symbol">SI</span><strong>Monitoring</strong><small>Detect and respond</small></button>
+            <button type="button" class="sl-arch-node sl-arch-node-recovery is-selected" data-layer="recovery" aria-pressed="true"><span class="sl-arch-node-symbol">BC</span><strong>Recovery</strong><small>Restore capability</small></button>
+          </div>
+          <div class="sl-architecture-summary"><div><span class="sl-summary-icon" aria-hidden="true">◈</span><div><strong id="coverage-count">5 of 8 layers selected</strong><p id="coverage-copy">Treat these as discussion areas to validate, assign owners to and test regularly.</p></div></div><button type="button" class="sl-reset-button" id="reset-layers">Reset profile</button></div>
+          <div class="sl-priority-box"><p class="sl-control-label">SUGGESTED DISCUSSION START</p><p id="priority-text">Start with identity hardening, endpoint protection, network exposure and a tested recovery path.</p></div>
+        </div>
+      </div>
+      <div class="sl-architecture-note"><span aria-hidden="true">ⓘ</span><p>Real architectures must be tailored to asset inventory, threat model, regulatory duties, existing controls, operational capacity and a formally agreed scope. This configurator stores nothing and does not connect to your systems.</p></div>
+    </section>
+
+    <section class="sl-bottom-cta">
+      <div><p class="sl-kicker">TURN THE MODEL INTO A PLAN</p><h2>Start with your actual environment.</h2><p>Use the guided assessment to organise a first conversation, or explore Shield InfoSec's services.</p></div>
+      <div class="sl-bottom-actions"><a class="sl-button sl-primary" href="/security-assessment.html">Build my security checklist <span aria-hidden="true">→</span></a><a class="sl-button sl-secondary" href="/services.html">Explore services</a></div>
+    </section>
+  </main>
+  <footer class="sl-footer">
+    <a class="sl-footer-brand" href="/index.html">SHIELD INFOSEC</a>
+    <p>Illustrative security models. No live monitoring or infrastructure changes.</p>
+    <div><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/index.html#contact">Contact</a></div>
+  </footer>
+</body>
+</html>
