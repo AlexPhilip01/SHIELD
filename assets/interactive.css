@@ -67,14 +67,23 @@ html { scroll-padding-top: 5.5rem; }
 #home .shield-3d-hero {
   position: absolute;
   z-index: 0;
-  top: 42px;
-  right: 2px;
-  width: min(48%, 240px);
-  aspect-ratio: 1;
+  top: 76px;
+  right: 26px;
+  width: min(30%, 132px);
   height: auto;
+  aspect-ratio: 221 / 300;
   opacity: .24;
   pointer-events: none;
-  filter: saturate(.88);
+  filter: drop-shadow(0 0 18px rgb(214 168 78 / .35));
+  transform: perspective(600px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transition: transform .25s ease-out;
+}
+@media (prefers-reduced-motion: no-preference) {
+  #home .shield-3d-hero { animation: shield-float 6s ease-in-out infinite; }
+}
+@keyframes shield-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -8px; }
 }
 #home figure > div,
 #home figure > svg {
@@ -138,10 +147,10 @@ button:disabled, input:disabled, [aria-disabled="true"] {
 
 @media (max-width: 640px) {
   #home .shield-3d-hero {
-    top: 46px;
-    right: -8px;
-    width: 150px;
-    opacity: .14;
+    top: 40px;
+    right: 8px;
+    width: 84px;
+    opacity: .22;
   }
   #shield-back-to-top { width: 42px; height: 42px; border-radius: 11px; }
 }
